@@ -13,7 +13,11 @@
  ### 1. Given the following states, New York, Ohio, Florida, Georgia and Kentucky, create a dictionary which stores these states along with their capitals. The capitals of these states are as follows (in the correct order), Albany, Columbus, Tallahassee, Atlanta, and Frankfort.
  */
 // write your code here
-
+var stateAndCapitalDictionary = ["New York" : "Albany",
+                                 "Ohio" : "Columbus",
+                                 "Florida" : "Tallahassee",
+                                 "Georgia" : "Atlanta",
+                                 "Kentucky" : "Frankfort"]
 
 
 
@@ -21,7 +25,7 @@
  ### 2. What is the type of the dictionary you created in Question 1?
  */
 
-
+// We created a dictionary with String keys and String values.
 
 
 /*: question3
@@ -29,7 +33,8 @@
  */
 // write your code here
 
-
+var capital = "Capital"
+stateAndCapitalDictionary["Florida"] = capital
 
 
 /*: question4
@@ -37,14 +42,17 @@
  */
 // write your code here
 
-
+if let capitalOfFlorida = stateAndCapitalDictionary["Florida"] {
+    print("The capital of Florida is \(capitalOfFlorida)")
+}
 
 
 /*: question5
  ### 5. Create a variable called `anotherCapital` and assign to it the value of Pennsylvania's capital from the dictionary.
  */
 // write your code here
-
+var anotherCapital : String = ""
+stateAndCapitalDictionary["Pennsylvannia"] = anotherCapital
 
 
 
@@ -52,7 +60,9 @@
  ### 6. Unwrap `anotherCapital` and print out the message "I don't know Pennsylvania's capital" to the console.
  */
 // write your code here
-
+if let capitalOfPennsylvannia = stateAndCapitalDictionary["Pennsylvannia"] {
+    print("I don't know Pennsylvannia's capital.")
+}
 
 
 
@@ -60,7 +70,7 @@
  ### 7. Pennsylvania's capital is Harrisburg. Add it to your state capitals dictionary.
  */
 // write your code here
-
+stateAndCapitalDictionary["Pennsylvannia"] = "Harrisburg"
 
 
 
@@ -68,7 +78,9 @@
  ### 8. Retrieve Pennsylvania's capital from your dictionary. Unwrap it and print the message "Pennsylvania's capital is <Capital>" to the console.
  */
 // write your code here
-
+if let capitalOfPennsylvannia = stateAndCapitalDictionary["Pennsylvannia"] {
+    print("Pennsylvannia's capital is \(capitalOfPennsylvannia)")
+}
 
 
 
@@ -76,7 +88,8 @@
  ### 9. We don't really care about Pennsylvania's capital. Delete it from the dictionary. Print your dictionary to the console to ensure it's gone.
  */
 // write your code here
-
+stateAndCapitalDictionary.removeValueForKey("Pennsylvannia")
+print("\(stateAndCapitalDictionary)")
 
 
 
@@ -86,6 +99,9 @@
 let state = "New York"
 // write your code here
 
+if let capitalOfNewYork = stateAndCapitalDictionary[state] {
+    print("The capital of \(state) is \(capitalOfNewYork).")
+}
 
 
 
@@ -100,7 +116,10 @@ let state = "New York"
  Since there are multiple members for each band, the value of each key should be an `Array`.
  */
 // write your code here
-
+var bandAndMembers = ["Nirvana": ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"],
+                      "The Beatles" : ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"],
+                      "The Breeders" : ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"],
+                      "Pixies" : ["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]]
 
 
 
@@ -109,7 +128,7 @@ let state = "New York"
  */
 
 
-
+// This dictionary has Strings has its Keys, and an array of Strings as its value.
 
 /*: question13
  ### 13. You have been given a band name in the constant `band` below. Use that band name to retrieve its list of members from the array you created in Question 11. Then unwrap that list of members and print it to the console.
@@ -117,7 +136,9 @@ let state = "New York"
 let bandName = "Pixies"
 // write your code here
 
-
+if let membersOfPixies = bandAndMembers[bandName] {
+    print("\(membersOfPixies)")
+}
 
 
 /*:
